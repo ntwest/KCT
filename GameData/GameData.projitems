@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>29871324-4967-40d2-929c-d7c74d0b57dc</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>GameData</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)KerbalConstructionTime\.version" />
+    <None Include="$(MSBuildThisFileDirectory)KerbalConstructionTime\CHANGELOG.md" />
+    <None Include="$(MSBuildThisFileDirectory)KerbalConstructionTime\KCT Guide.pdf" />
+    <None Include="$(MSBuildThisFileDirectory)KerbalConstructionTime\KCT_Presets\7Days.cfg" />
+    <None Include="$(MSBuildThisFileDirectory)KerbalConstructionTime\KCT_Presets\default.cfg" />
+    <None Include="$(MSBuildThisFileDirectory)KerbalConstructionTime\KCT_Presets\rlowtech.cfg" />
+    <None Include="$(MSBuildThisFileDirectory)KerbalConstructionTime\KCT_Presets\UpFree.cfg" />
+    <None Include="$(MSBuildThisFileDirectory)KerbalConstructionTime\LICENSE" />
+    <None Include="$(MSBuildThisFileDirectory)KerbalConstructionTime\README.md" />
+    <None Include="$(MSBuildThisFileDirectory)Readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)KerbalConstructionTime\Icons\KCT_off.png" />
+    <Content Include="$(MSBuildThisFileDirectory)KerbalConstructionTime\Icons\KCT_on.png" />
+  </ItemGroup>
+</Project>
