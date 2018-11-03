@@ -33,15 +33,16 @@
   <ItemGroup>
     <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Assembly-CSharp.1.5.1\lib\Assembly-CSharp.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data" />
     <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\UnityEngine.1.5.1\lib\UnityEngine.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\UnityEngine.UI.1.5.1\lib\UnityEngine.UI.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -56,6 +57,117 @@
     <Compile Include="Core\CrewedPart.cs" />
     <Compile Include="DataStorage.cs" />
     <Compile Include="Core\ExtensionMethods.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Exceptions\ExpressiveException.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Exceptions\FunctionNameAlreadyRegisteredException.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Exceptions\MissingParticipantException.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Exceptions\MissingTokenException.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Exceptions\ParameterCountMismatchException.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Exceptions\UnrecognisedTokenException.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Expression.cs" />
+    <Compile Include="ExternalLibraries\Expressive\ExpressionParser.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Expressions\BinaryExpression.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Expressions\ConstantValueExpression.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Expressions\FunctionExpression.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Expressions\IExpression.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Expressions\ParenthesisedExpression.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Expressions\UnaryExpression.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Expressions\VariableExpression.cs" />
+    <Compile Include="ExternalLibraries\Expressive\ExpressiveOptions.cs" />
+    <Compile Include="ExternalLibraries\Expressive\ExtensionMethods.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Conversion\DateFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Conversion\DecimalFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Conversion\DoubleFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Conversion\IntegerFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Conversion\LongFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Conversion\StringFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Date\AddDaysFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Date\AddHoursFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Date\AddMillisecondsFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Date\AddMinutesFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Date\AddMonthsFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Date\AddSecondsFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Date\AddYearsFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Date\DayOfFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Date\DaysBetweenFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Date\HourOfFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Date\HoursBetweenFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Date\MillisecondOfFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Date\MillisecondsBetweenFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Date\MinuteOfFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Date\MinutesBetweenFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Date\MonthOfFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Date\SecondOfFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Date\SecondsBetweenFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Date\YearOfFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\FunctionBase.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\IFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Logical\IfFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Logical\InFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Mathematical\AbsFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Mathematical\AcosFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Mathematical\AsinFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Mathematical\AtanFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Mathematical\CeilingFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Mathematical\CosFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Mathematical\CountFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Mathematical\ExpFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Mathematical\FloorFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Mathematical\IEEERemainderFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Mathematical\Log10Function.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Mathematical\LnFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Mathematical\LogFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Mathematical\MaxFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Mathematical\MinFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Mathematical\PowFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Mathematical\RandomFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Mathematical\RoundFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Mathematical\SignFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Mathematical\SinFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Mathematical\SqrtFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Mathematical\SumFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Mathematical\TanFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Mathematical\TruncateFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Statistical\AverageFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Statistical\MeanFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Statistical\MedianFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\Statistical\ModeFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\String\ContainsFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\String\EndsWithFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\String\LengthFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\String\PadLeftFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\String\PadRightFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\String\RegexFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\String\StartsWithFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Functions\String\SubstringFunction.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Helpers\Comparison.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Helpers\Numbers.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Helpers\TypeHelper.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Operators\Additive\PlusOperator.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Operators\Additive\SubtractOperator.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Operators\Bitwise\BitwiseAndOperator.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Operators\Bitwise\BitwiseOrOperator.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Operators\Bitwise\BitwiseXOrOperator.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Operators\Bitwise\LeftShiftOperator.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Operators\Bitwise\RightShiftOperator.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Operators\Conditional\NullCoalescingOperator.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Operators\Grouping\ParenthesisCloseOperator.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Operators\Grouping\ParenthesisOpenOperator.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Operators\IOperator.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Operators\Logic\AndOperator.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Operators\Logic\NotOperator.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Operators\Logic\OrOperator.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Operators\Multiplicative\DivideOperator.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Operators\Multiplicative\ModulusOperator.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Operators\Multiplicative\MultiplyOperator.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Operators\OperatorBase.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Operators\OperatorPrecedence.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Operators\Relational\EqualOperator.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Operators\Relational\GreaterThanOperator.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Operators\Relational\GreaterThanOrEqualOperator.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Operators\Relational\LessThanOperator.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Operators\Relational\LessThanOrEqualOperator.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Operators\Relational\NotEqualOperator.cs" />
+    <Compile Include="ExternalLibraries\Expressive\Token.cs" />
     <Compile Include="GameStates.cs" />
     <Compile Include="Core\IKCTBuildItem\BuildListVessel.cs" />
     <Compile Include="Core\IKCTBuildItem\IKCTBuildItem.cs" />
@@ -100,6 +212,7 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>AssemblyVersion.cs</LastGenOutput>
     </Content>
+    <None Include="ExternalLibraries\Expressive\README.md" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
