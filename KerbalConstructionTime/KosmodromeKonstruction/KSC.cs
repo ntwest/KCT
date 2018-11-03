@@ -187,11 +187,13 @@ namespace KerbalConstructionTime
                 if (updateDestrNode)
                     ActiveLPInstance.RefreshDestructionNode();
 
-                try
+                if (LaunchPads.Count <= LP_ID)
                 {
-                    LaunchPads[LP_ID].SetActive();
+                    Log.Error( "LaunchPads List is Missing LaunchPad ID ".MemoizedConcat( LP_ID.MemoizedToString() ) );
+                    return;
                 }
-                catch 
+
+                LaunchPads[LP_ID].SetActive();               
             }
         }
 
